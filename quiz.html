@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CyberSafe helps students, teachers, and internet users recognize online threats and practice safer digital habits."
+    />
+    <title>Cybersecurity Quiz | CyberSafe</title>
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html"
+        ><img
+          src="assets/images/logo.svg"
+          alt=""
+          width="31"
+          height="37"
+        />CyberSafe</a
+      >
+      <span class="tagline">Cyber Safe, Cyber Wise</span>
+      <a class="header-about" href="about.html">About Us</a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        ☰ <span>Menu</span>
+      </button>
+    </header>
+    <div class="site-layout">
+      <aside class="sidebar" id="primary-navigation">
+        <p class="nav-caption">Learning center</p>
+        <nav aria-label="Primary navigation">
+          <a class="nav-link" href="index.html"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m3 10 9-7 9 7v11h-6v-7H9v7H3Z" /></svg
+            ><span>Home</span></a
+          >
+          <a class="nav-link" href="awareness.html"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 5C8 2 3 3 2 4v16c3-2 7-2 10 0 3-2 7-2 10 0V4c-3-2-7-2-10 1Zm0 0v15"
+              /></svg
+            ><span>Cybersecurity Awareness</span></a
+          >
+          <a class="nav-link" href="quiz.html" aria-current="page"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="5" y="3" width="14" height="19" rx="2" />
+              <path d="m8 9 2 2 5-5M8 15h8m-8 4h5" /></svg
+            ><span>Quiz</span></a
+          >
+          <a class="nav-link" href="about.html"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 11v6m0-10v1" /></svg
+            ><span>About Us</span></a
+          >
+        </nav>
+        <p class="sidebar-note">
+          <strong>A safer internet starts with you.</strong>Explore the
+          lessons.<br />Build confidence online.
+        </p>
+      </aside>
+      <main id="main-content" tabindex="-1">
+        <div class="content">
+          <div class="page-context">
+            <span>CyberSafe Learning Center</span
+            ><span class="context-divider" aria-hidden="true">/</span
+            ><span>Knowledge check</span>
+          </div>
+          <div class="quiz-wrap">
+            <header class="page-heading">
+              <p class="eyebrow">Put your learning into practice</p>
+              <h1>Cybersecurity Quiz</h1>
+              <p class="intro">
+                10 questions. Everyday situations. Choose the safest action.
+              </p>
+              <div class="page-tags">
+                <span>10 questions</span><span>Multiple choice</span
+                ><span>Instant feedback</span>
+              </div>
+            </header>
+            <noscript
+              ><div class="panel">
+                Please enable JavaScript to take the quiz. You can still read
+                all <a href="awareness.html">cybersecurity lessons</a>.
+              </div></noscript
+            >
+            <section id="quiz-section" hidden aria-label="Cybersecurity quiz">
+              <div class="quiz-meta">
+                <span id="question-progress" aria-live="polite"></span
+                ><span id="answered-count"></span>
+              </div>
+              <progress
+                id="quiz-progress"
+                max="10"
+                value="0"
+                aria-label="Questions answered"
+              ></progress>
+              <form id="quiz-form" class="panel quiz-panel" novalidate>
+                <fieldset>
+                  <legend id="question-title" tabindex="-1"></legend>
+                  <div id="answer-options" class="answers"></div>
+                </fieldset>
+                <div
+                  id="answer-feedback"
+                  role="status"
+                  aria-live="polite"
+                  aria-atomic="true"
+                ></div>
+                <p id="quiz-error" class="error" role="alert" hidden></p>
+                <div class="quiz-actions">
+                  <button
+                    class="button secondary"
+                    id="previous-button"
+                    type="button"
+                  >
+                    ← Previous</button
+                  ><button class="button" id="next-button" type="button">
+                    Next →</button
+                  ><button
+                    class="button"
+                    id="submit-button"
+                    type="submit"
+                    hidden
+                  >
+                    Submit Quiz
+                  </button>
+                </div>
+              </form>
+              <p class="quiz-note">
+                Select one answer per question. You can go back to change
+                answers before submitting.<br />No registration. Your responses
+                stay in this browser tab.
+              </p>
+            </section>
+            <section
+              id="quiz-results"
+              hidden
+              aria-labelledby="results-title"
+            ></section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="site-footer">© 2026 CyberSafe. All Rights Reserved.</footer>
+  </body>
+</html>
